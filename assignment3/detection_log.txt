@@ -1,0 +1,155 @@
+jetson.inference -- detectNet loading custom model '(null)'
+
+detectNet -- loading detection network model from:
+          -- model        networks/SSD-Mobilenet-v2/ssd_mobilenet_v2_coco.uff
+          -- input_blob   'Input'
+          -- output_blob  'NMS'
+          -- output_count 'NMS_1'
+          -- class_labels networks/SSD-Mobilenet-v2/ssd_coco_labels.txt
+          -- threshold    0.300000
+          -- batch_size   1
+
+[TRT]    TensorRT version 8.0.1
+[TRT]    loading NVIDIA plugins...
+[TRT]    Registered plugin creator - ::GridAnchor_TRT version 1
+[TRT]    Registered plugin creator - ::GridAnchorRect_TRT version 1
+[TRT]    Registered plugin creator - ::NMS_TRT version 1
+[TRT]    Registered plugin creator - ::Reorg_TRT version 1
+[TRT]    Registered plugin creator - ::Region_TRT version 1
+[TRT]    Registered plugin creator - ::Clip_TRT version 1
+[TRT]    Registered plugin creator - ::LReLU_TRT version 1
+[TRT]    Registered plugin creator - ::PriorBox_TRT version 1
+[TRT]    Registered plugin creator - ::Normalize_TRT version 1
+[TRT]    Registered plugin creator - ::ScatterND version 1
+[TRT]    Registered plugin creator - ::RPROI_TRT version 1
+[TRT]    Registered plugin creator - ::BatchedNMS_TRT version 1
+[TRT]    Registered plugin creator - ::BatchedNMSDynamic_TRT version 1
+[0;31m[TRT]    Could not register plugin creator -  ::FlattenConcat_TRT version 1
+[0m[TRT]    Registered plugin creator - ::CropAndResize version 1
+[TRT]    Registered plugin creator - ::DetectionLayer_TRT version 1
+[TRT]    Registered plugin creator - ::EfficientNMS_ONNX_TRT version 1
+[TRT]    Registered plugin creator - ::EfficientNMS_TRT version 1
+[TRT]    Registered plugin creator - ::Proposal version 1
+[TRT]    Registered plugin creator - ::ProposalLayer_TRT version 1
+[TRT]    Registered plugin creator - ::PyramidROIAlign_TRT version 1
+[TRT]    Registered plugin creator - ::ResizeNearest_TRT version 1
+[TRT]    Registered plugin creator - ::Split version 1
+[TRT]    Registered plugin creator - ::SpecialSlice_TRT version 1
+[TRT]    Registered plugin creator - ::InstanceNormalization_TRT version 1
+[TRT]    completed loading NVIDIA plugins.
+[TRT]    detected model format - UFF  (extension '.uff')
+[TRT]    desired precision specified for GPU: FASTEST
+[0;33m[TRT]    requested fasted precision for device GPU without providing valid calibrator, disabling INT8
+[0m[TRT]    [MemUsageChange] Init CUDA: CPU +203, GPU +0, now: CPU 227, GPU 2945 (MiB)
+[TRT]    native precisions detected for GPU:  FP32, FP16
+[TRT]    selecting fastest native precision for GPU:  FP16
+[TRT]    found engine cache file /usr/local/bin/networks/SSD-Mobilenet-v2/ssd_mobilenet_v2_coco.uff.1.1.8001.GPU.FP16.engine
+[TRT]    found model checksum /usr/local/bin/networks/SSD-Mobilenet-v2/ssd_mobilenet_v2_coco.uff.sha256sum
+[TRT]    echo "$(cat /usr/local/bin/networks/SSD-Mobilenet-v2/ssd_mobilenet_v2_coco.uff.sha256sum) /usr/local/bin/networks/SSD-Mobilenet-v2/ssd_mobilenet_v2_coco.uff" | sha256sum --check --status
+[TRT]    model matched checksum /usr/local/bin/networks/SSD-Mobilenet-v2/ssd_mobilenet_v2_coco.uff.sha256sum
+[TRT]    loading network plan from engine cache... /usr/local/bin/networks/SSD-Mobilenet-v2/ssd_mobilenet_v2_coco.uff.1.1.8001.GPU.FP16.engine
+[0;32m[TRT]    device GPU, loaded /usr/local/bin/networks/SSD-Mobilenet-v2/ssd_mobilenet_v2_coco.uff
+[0m[TRT]    [MemUsageChange] Init CUDA: CPU +0, GPU +0, now: CPU 261, GPU 3091 (MiB)
+[TRT]    Loaded engine size: 33 MB
+[TRT]    [MemUsageSnapshot] deserializeCudaEngine begin: CPU 261 MiB, GPU 3091 MiB
+[TRT]    Using cublas a tactic source
+[TRT]    [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +158, GPU +305, now: CPU 437, GPU 3464 (MiB)
+[TRT]    Using cuDNN as a tactic source
+[TRT]    [MemUsageChange] Init cuDNN: CPU +240, GPU +0, now: CPU 677, GPU 3464 (MiB)
+[TRT]    [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +0, GPU +0, now: CPU 677, GPU 3464 (MiB)
+[TRT]    Deserialization required 13922527 microseconds.
+[TRT]    [MemUsageSnapshot] deserializeCudaEngine end: CPU 677 MiB, GPU 3464 MiB
+[TRT]    [MemUsageSnapshot] ExecutionContextwarning:  importing jetson.utils is deprecated.  please 'import jetson_utils' instead.
+warning:  importing jetson.inference is deprecated.  please 'import jetson_inference' instead.
+current image: image1.jpg
+current threshold: 0.3
+image size: 960 x 639
+Detected objects: 1
+ClassID: 2 Confidence: 0.99072265625 Center: (470.390625, 373.5560302734375) Width: 439.21875 Height: 448.516845703125 Left&Top: 250.78125 149.297607421875 Right&Bottom: 690.0 597.814453125 Area: 196997.015625
+current image: image1.jpg
+current threshold: 0.7
+image size: 960 x 639
+Detected objects: 1
+ClassID: 2 Confidence: 0.99072265625 Center: (470.390625, 373.5560302734375) Width: 439.21875 Height: 448.516845703125 Left&Top: 250.78125 149.297607421875 Right&Bottom: 690.0 597.814453125 Area: 196997.015625
+current image: image2.jpg
+current threshold: 0.3
+image size: 960 x 1440
+Detected objects: 6
+ClassID: 2 Confidence: 0.87890625 Center: (467.4609375, 650.7421875) Width: 906.328125 Height: 696.796875 Left&Top: 14.296875 302.34375 Right&Bottom: 920.625 999.140625 Area: 631526.625
+ClassID: 2 Confidence: 0.46142578125 Center: (465.46875, 492.978515625) Width: 802.5 Height: 420.29296875 Left&Top: 64.21875 282.83203125 Right&Bottom: 866.71875 703.125 Area: 337285.09375
+ClassID: 2 Confidence: 0.481201171875 Center: (251.015625, 653.5546875) Width: 502.03125 Height: 616.640625 Left&Top: 0.0 345.234375 Right&Bottom: 502.03125 961.875 Area: 309572.875
+ClassID: 2 Confidence: 0.404052734375 Center: (178.9453125, 735.46875) Width: 357.890625 Height: 684.84375 Left&Top: 0.0 393.046875 Right&Bottom: 357.890625 1077.890625 Area: 245099.15625
+ClassID: 2 Confidence: 0.33203125 Center: (255.0, 508.359375) Width: 469.6875 Height: 365.625 Left&Top: 20.15625 325.546875 Right&Bottom: 489.84375 691.171875 Area: 171729.5
+ClassID: 3 Confidence: 0.42919921875 Center: (64.9658203125, 232.7783203125) Width: 111.240234375 Height: 125.068359375 Left&Top: 9.345703125 170.244140625 Right&Bottom: 120.5859375 295.3125 Area: 13912.6337890625
+current image: image2.jpg
+current threshold: 0.7
+image size: 960 x 1440
+Detected objects: 1
+ClassID: 2 Confidence: 0.87890625 Center: (467.4609375, 650.7421875) Width: 906.328125 Height: 696.796875 Left&Top: 14.296875 302.34375 Right&Bottom: 920.625 999.140625 Area: 631526.625
+ creation begin: CPU 677 MiB, GPU 3464 MiB
+[TRT]    Using cublas a tactic source
+[TRT]    [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +0, GPU +0, now: CPU 677, GPU 3464 (MiB)
+[TRT]    Using cuDNN as a tactic source
+[TRT]    [MemUsageChange] Init cuDNN: CPU +1, GPU +0, now: CPU 678, GPU 3464 (MiB)
+[TRT]    Total per-runner device memory is 22143488
+[TRT]    Total per-runner host memory is 136992
+[TRT]    Allocated activation device memory of size 14261248
+[TRT]    [MemUsageSnapshot] ExecutionContext creation end: CPU 680 MiB, GPU 3463 MiB
+[TRT]    
+[TRT]    CUDA engine context initialized on device GPU:
+[TRT]       -- layers       123
+[TRT]       -- maxBatchSize 1
+[TRT]       -- deviceMemory 14261248
+[TRT]       -- bindings     3
+[TRT]       binding 0
+                -- index   0
+                -- name    'Input'
+                -- type    FP32
+                -- in/out  INPUT
+                -- # dims  3
+                -- dim #0  3
+                -- dim #1  300
+                -- dim #2  300
+[TRT]       binding 1
+                -- index   1
+                -- name    'NMS'
+                -- type    FP32
+                -- in/out  OUTPUT
+                -- # dims  3
+                -- dim #0  1
+                -- dim #1  100
+                -- dim #2  7
+[TRT]       binding 2
+                -- index   2
+                -- name    'NMS_1'
+                -- type    FP32
+                -- in/out  OUTPUT
+                -- # dims  3
+                -- dim #0  1
+                -- dim #1  1
+                -- dim #2  1
+[TRT]    
+[TRT]    binding to input 0 Input  binding index:  0
+[TRT]    binding to input 0 Input  dims (b=1 c=3 h=300 w=300) size=1080000
+[TRT]    binding to output 0 NMS  binding index:  1
+[TRT]    binding to output 0 NMS  dims (b=1 c=1 h=100 w=7) size=2800
+[TRT]    binding to output 1 NMS_1  binding index:  2
+[TRT]    binding to output 1 NMS_1  dims (b=1 c=1 h=1 w=1) size=4
+[TRT]    
+[0;32m[TRT]    device GPU, /usr/local/bin/networks/SSD-Mobilenet-v2/ssd_mobilenet_v2_coco.uff initialized.
+[0m[TRT]    W = 7  H = 100  C = 1
+[TRT]    detectNet -- maximum bounding boxes:   100
+[TRT]    loaded 91 class labels
+[TRT]    detectNet -- number of object classes:  91
+[TRT]    loaded 0 class colors
+[0;33m[TRT]    didn't load expected number of class colors  (0 of 91)
+[0m[0;33m[TRT]    filling in remaining 91 class colors with default colors
+[0m[image]  loaded 'image1.jpg'  (960x639, 3 channels)
+[image]  saved 'image1_threshold_0.3.jpg'  (960x639, 3 channels)
+[image]  loaded 'image1.jpg'  (960x639, 3 channels)
+[image]  saved 'image1_threshold_0.7.jpg'  (960x639, 3 channels)
+[image]  loaded 'image2.jpg'  (960x1440, 3 channels)
+[image]  saved 'image2_threshold_0.3.jpg'  (960x1440, 3 channels)
+[image]  loaded 'image2.jpg'  (960x1440, 3 channels)
+[image]  saved 'image2_threshold_0.7.jpg'  (960x1440, 3 channels)
+[TRT]    [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +0, GPU +0, now: CPU 894, GPU 3463 (MiB)
